@@ -5,6 +5,7 @@ from services.calcular_agitador import get_dolar_bcb
 
 def calcular_secador_rotary_combustion_gas_heated(material:str, tipo_gas:str, area:float):
     try:
+        area = area * 10.7639  # Converter m² para ft²
         # Obter os coeficientes do material
         doc_ref_material = db.collection("Material_Dryer").document(material)
         doc_material = doc_ref_material.get()
@@ -30,12 +31,12 @@ def calcular_secador_rotary_combustion_gas_heated(material:str, tipo_gas:str, ar
         ln_A_squared = ln_A**2
         expoente = (4.9504 - (0.5827 * ln_A) + (0.0925 * ln_A_squared))
         calc_expo = np.exp(expoente)
-        C = (1 + fg + fm) * calc_expo
+        c = (1 + fg + fm) * calc_expo
 
 
         # Conversão para reais
         dolar_bcb = get_dolar_bcb()
-        C_reais = C * dolar_bcb
+        C_reais = c * dolar_bcb
 
         return "{:.2f}".format(C_reais).replace(".", ",")
 
@@ -44,6 +45,7 @@ def calcular_secador_rotary_combustion_gas_heated(material:str, tipo_gas:str, ar
     
 def calcular_secador_hot_air_heated(material:str, tipo_gas:str, area:float):
     try:
+        area = area * 10.7639  # Converter m² para ft²
         # Obter os coeficientes do material
         doc_ref_material = db.collection("Material_Dryer").document(material)
         doc_material = doc_ref_material.get()
@@ -79,11 +81,13 @@ def calcular_secador_hot_air_heated(material:str, tipo_gas:str, area:float):
         raise HTTPException(status_code=500, detail=str(e))
     
 def calcular_secador_rotary_steam_tube(material:str, area:float):
-    if material == "Carbon steel":
+    if material == "Aço Carbono":
         f = 1
-    elif material == "Stainless steel, 304":
+    elif material == "Aço Inoxidável, 304":
         f = 1.75
+    
 
+    area = area * 10.7639  # Converter m² para ft²
     A = area**0.60
     C = 1.83 * f * A
 
@@ -94,6 +98,7 @@ def calcular_secador_rotary_steam_tube(material:str, area:float):
 
 def calcular_secador_cabinet_dryer(tipo_pressao:str, area:float):
     try:
+        area = area * 10.7639  # Converter m² para ft²
         # Obter os coeficientes do material
         doc_ref_pressao = db.collection("Pressure_Dryer").document(tipo_pressao)
         doc_pressao = doc_ref_pressao.get()
@@ -120,6 +125,7 @@ def calcular_secador_cabinet_dryer(tipo_pressao:str, area:float):
 
 def calcular_secador_spray_dryer(material:str, vazao:float):
     try:
+        vazao = vazao * 2.20462  # Converter kg para lb
         # Obter os coeficientes do material
         doc_ref_material = db.collection("Material_Spray_Dryer").document(material)
         doc_material = doc_ref_material.get()
@@ -147,21 +153,21 @@ def calcular_secador_spray_dryer(material:str, vazao:float):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
     
-def calcular_secador_multiple_hearth_furnaces(n_lareira: int, diametro: float):
+def calcular_secador_multiple_hearth_furnaces(n_lareira: int, diametro: str):
 
-    if diametro == 6:
+    if diametro == '6':
         a = 5.071
-    elif diametro == 10:
+    elif diametro == '10':
         a = 5.295
-    elif diametro == 14.25:
+    elif diametro == '14.25':
         a = 5.521
-    elif diametro == 16.75:
+    elif diametro == '16.75':
         a = 5.719
-    elif diametro == 18.75:
+    elif diametro == '18.75':
         a = 5.853
-    elif diametro == 22.25:
+    elif diametro == '22.25':
         a = 6.014
-    elif diametro == 26.75:
+    elif diametro == '26.75':
         a = 6.094
 
     
