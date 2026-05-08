@@ -1,0 +1,340 @@
+{
+  "DryingGas_Dryer": [
+    {
+      "id": "Ar quente",
+      "data": {
+        "value": 0.0
+      }
+    },
+    {
+      "id": "Gás de Combustão (contato direto)",
+      "data": {
+        "value": 0.12
+      }
+    },
+    {
+      "id": "Gás de Combustão (contato indireto)",
+      "data": {
+        "value": 0.35
+      }
+    }
+  ],
+  "Material_Dryer": [
+    {
+      "id": "Aço Macio",
+      "data": {
+        "value": 1.0
+      }
+    },
+    {
+      "id": "Forrado com Inoxidável 304-20%",
+      "data": {
+        "value": 0.25
+      }
+    },
+    {
+      "id": "Forrado com Inoxidável 316-20%",
+      "data": {
+        "value": 0.5
+      }
+    },
+    {
+      "id": "Inoxidável tipo 304",
+      "data": {
+        "value": 1.4
+      }
+    }
+  ],
+  "Material_Spray_Dryer": [
+    {
+      "id": "Aço Carbono",
+      "data": {
+        "value": 0.33
+      }
+    },
+    {
+      "id": "Aço Inoxidável 304",
+      "data": {
+        "value": 1.0
+      }
+    },
+    {
+      "id": "Aço Inoxidável 316",
+      "data": {
+        "value": 1.13
+      }
+    },
+    {
+      "id": "Aço Inoxidável 321",
+      "data": {
+        "value": 1.0
+      }
+    },
+    {
+      "id": "Inconel",
+      "data": {
+        "value": 3.67
+      }
+    },
+    {
+      "id": "Monel",
+      "data": {
+        "value": 3.0
+      }
+    }
+  ],
+  "Pressure_Dryer": [
+    {
+      "id": "Pressão Atmosférica",
+      "data": {
+        "value": 1.0
+      }
+    },
+    {
+      "id": "Vácuo",
+      "data": {
+        "value": 2.0
+      }
+    }
+  ],
+  "coeficientes": [],
+  "coeficientes_fans": [
+    {
+      "id": "Hélice",
+      "data": {
+        "a": -0.4456,
+        "b": 0.2211,
+        "c": 0.082
+      }
+    },
+    {
+      "id": "Hélice com Palhetas Guia",
+      "data": {
+        "a": -1.0181,
+        "b": 0.3332,
+        "c": 0.0647
+      }
+    },
+    {
+      "id": "Lâmina Curvada para Trás",
+      "data": {
+        "a": 0.04,
+        "b": 0.1821,
+        "c": 0.0786
+      }
+    },
+    {
+      "id": "Lâmina Radial",
+      "data": {
+        "a": 0.4692,
+        "b": 0.1203,
+        "c": 0.0931
+      }
+    }
+  ],
+  "fatores_materiais": [
+    {
+      "id": "Aço Carbono",
+      "data": {
+        "fator_m": 2.2
+      }
+    },
+    {
+      "id": "Aço Inoxidável",
+      "data": {
+        "fator_m": 5.5
+      }
+    },
+    {
+      "id": "Fibra de Vidro",
+      "data": {
+        "fator_m": 4.0
+      }
+    },
+    {
+      "id": "Liga de Níquel",
+      "data": {
+        "fator_m": 11.0
+      }
+    }
+  ],
+  "fatores_pressao": [
+    {
+      "id": "16kPa",
+      "data": {
+        "Vane": null,
+        "Radial": 1.6,
+        "Propeller": null,
+        "Backward Curved": null
+      }
+    },
+    {
+      "id": "1kPa",
+      "data": {
+        "Vane": 1.0,
+        "Radial": 1.0,
+        "Propeller": 1.0,
+        "Backward Curved": 1.0
+      }
+    },
+    {
+      "id": "2kPa",
+      "data": {
+        "Vane": 1.15,
+        "Radial": 1.15,
+        "Propeller": null,
+        "Backward Curved": 1.15
+      }
+    },
+    {
+      "id": "4kPa",
+      "data": {
+        "Vane": 1.3,
+        "Radial": 1.3,
+        "Propeller": null,
+        "Backward Curved": 1.3
+      }
+    },
+    {
+      "id": "6kPa",
+      "data": {
+        "Vane": null,
+        "Radial": 1.45,
+        "Propeller": null,
+        "Backward Curved": 1.45
+      }
+    }
+  ],
+  "materiais_destilador": [
+    {
+      "id": "Aço Inoxidável, 304",
+      "data": {
+        "f1": 1.7
+      }
+    },
+    {
+      "id": "Aço Inoxidável, 316",
+      "data": {
+        "f1": 2.1
+      }
+    },
+    {
+      "id": "Carpenter 20CB-3",
+      "data": {
+        "f1": 3.2
+      }
+    },
+    {
+      "id": "Incoloy - 825",
+      "data": {
+        "f1": 3.7
+      }
+    },
+    {
+      "id": "Inconel - 600",
+      "data": {
+        "f1": 3.9
+      }
+    },
+    {
+      "id": "Monel - 400",
+      "data": {
+        "f1": 3.6
+      }
+    },
+    {
+      "id": "Níquel - 200",
+      "data": {
+        "f1": 5.4
+      }
+    },
+    {
+      "id": "Titânio",
+      "data": {
+        "f1": 7.7
+      }
+    }
+  ],
+  "tipo_empacotamento": [
+    {
+      "id": "Anéis Metálicos, 1 in.",
+      "data": {
+        "Cp": 32.3
+      }
+    },
+    {
+      "id": "Anéis Metálicos, 2 in.",
+      "data": {
+        "Cp": 23
+      }
+    },
+    {
+      "id": "Anéis Raschig de Cerâmica, 1 in.",
+      "data": {
+        "Cp": 19.6
+      }
+    },
+    {
+      "id": "Anéis Raschig de Cerâmica, 2 in.",
+      "data": {
+        "Cp": 13.6
+      }
+    },
+    {
+      "id": "Anéis Raschig de Metal, 1 in.",
+      "data": {
+        "Cp": 32.3
+      }
+    },
+    {
+      "id": "Anéis Raschig de Metal, 2 in.",
+      "data": {
+        "Cp": 23
+      }
+    },
+    {
+      "id": "Selas Intalox, 1 in.",
+      "data": {
+        "Cp": 19.6
+      }
+    },
+    {
+      "id": "Selas Intalox, 2 in.",
+      "data": {
+        "Cp": 13.6
+      }
+    }
+  ],
+  "tray_types_destilador": [
+    {
+      "id": "Grade",
+      "data": {
+        "f3": 0.8
+      }
+    },
+    {
+      "id": "Peneira (com tubo descendente)",
+      "data": {
+        "f3": 0.85
+      }
+    },
+    {
+      "id": "Tampa de Bolha",
+      "data": {
+        "f3": 1.59
+      }
+    },
+    {
+      "id": "Válvula",
+      "data": {
+        "f3": 1.0
+      }
+    },
+    {
+      "id": "Vávula",
+      "data": {
+        "f3": 1.0
+      }
+    }
+  ]
+}
